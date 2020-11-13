@@ -1,0 +1,163 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #1e2022;
+}
+
+.table > tbody > tr > * {
+  vertical-align: middle;
+}
+
+.btn-first {
+  background-color: #52616b;
+  color: white;
+  border: 0;
+}
+
+/* Navbar Start */
+.navbar-brand {
+  font-weight: 900;
+}
+
+.navbar-nav {
+  font-weight: 500;
+}
+
+.nav-link {
+  color: #9aa4ab !important;
+}
+
+.nav-link:hover {
+  color: #1e2022 !important;
+  font-weight: 900;
+}
+
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid black;
+  width: 20px;
+  margin-bottom: -2px;
+}
+/* Navbar End */
+
+/* Table Orang Start */
+.tr-hover:hover {
+  font-weight: 700;
+  margin: auto;
+}
+
+.table-orang > .td-foto > img {
+  border: 0 solid red;
+  border-radius: 100%;
+}
+
+.table .table-custom th {
+  background-color: #52616b;
+  color: white;
+}
+
+.table .table-custom th:first-child {
+  border-radius: 100px 0 0 100px;
+}
+
+.table .table-custom th:last-child {
+  border-radius: 0px 100px 100px 0px;
+}
+
+.table-orang > .th-nomor {
+  width: 5%;
+  text-align: center;
+}
+
+.table-orang > .td-foto {
+  width: 10%;
+  text-align: center;
+}
+
+.table-orang > .td-nama {
+  width: 77%;
+}
+
+.table-orang > .td-button {
+  width: 8%;
+  text-align: center;
+}
+
+.td-button > .btn-detail {
+  border: 0;
+  background-color: #52616b;
+  padding: 6.75px 16px;
+  transition: all 0.4s;
+}
+
+.td-button > .btn-detail:hover {
+  border-radius: 100%;
+}
+
+/* Page Link */
+.page-link {
+  color: #1e2022;
+}
+
+.page-item.active .page-link {
+  background-color: #52616b;
+  border-color: #52616b;
+}
+
+/* Table Orang End */
+
+/* Card Start */
+.card-custom {
+  border: 0;
+}
+
+.card-custom img {
+  border-radius: 10px;
+}
+
+.card > .detail-body {
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #52616b;
+  color: white;
+}
+
+.detail-footer {
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-nomor {
+  background-color: #52616b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px;
+  flex: 1 1 0;
+}
+/* Card End */
+
+@media (min-width: 992px) {
+  /* navbar strt */
+  .nav-link {
+    margin-right: 20px;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid black;
+    width: 20px;
+    margin: auto;
+    margin-bottom: -2px;
+  }
+  /* navbar end */
+
+  /* card start */
+  .detail-nomor {
+    width: 78%;
+  }
+  /* card end */
+}

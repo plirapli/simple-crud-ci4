@@ -1,0 +1,60 @@
+<?= $this->extend('template/template'); ?>
+
+<?= $this->section('content'); ?>
+<div class="container">
+    <div class="row my-4">
+        <div class="col"></div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 24rem;">
+                <div class=" card-header text-white bg-primary py-3">
+                    Informasi Lengkap
+                </div>
+                <img class="card-img-top" src="/img/default.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $orang['nama']; ?></h5>
+                    <p class="card-text"><?= $orang['alamat']; ?></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><?= $orang['telp']; ?></li>
+                </ul>
+                <div class="card-body">
+                    <a href="/orang/edit/<?= $orang['id']; ?>" class="btn btn-primary card-link">Edit</a>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        Delete
+                    </button>
+
+                    <a href="/orang/" class="btn btn-light card-link">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Apakaha anda yakin ingin menghapus?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="/orang/<?= $orang['id']; ?>" method="POST" class="d-inline">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger card-link">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?= $this->endsection(); ?>
